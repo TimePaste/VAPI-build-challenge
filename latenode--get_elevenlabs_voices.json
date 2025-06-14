@@ -1,0 +1,743 @@
+{
+  "id": "683be1a3d7a848642232fd6c",
+  "folderId": "6832329bee92a3567bbb30f3",
+  "title": "Get 11labs voices",
+  "description": "",
+  "nodes": [
+    {
+      "id": "683be1aecc9ed75e19ff874c",
+      "title": "2x weekly at 12:05PM",
+      "description": "",
+      "localId": "1",
+      "typeId": "6481fedb452eadd1825433e0",
+      "params": [
+        {
+          "key": "schedule_cron",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0 5 12 * * 0,3",
+            "text": "0 5 12 * * 0,3",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "schedule_timezone",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "America/Denver",
+            "text": "America/Denver",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "schedule_cron",
+            "title": "Schedule cron",
+            "type": "string",
+            "required": true,
+            "description": "Cron expression consists of five subexpressions separated by a blank: minute, \nhour, day of month, month, day of week. Node allows you to run the scenario by cron expression in the selected time zone. \nNote: the \"Run once\" command will not run a scenario by schedule! To start the node, it must be deployed on prod \nenvironment and be \\\"Active\\\". To disable the node, deactivate the script or remove the node from the script and deploy \nthe updated script to prod environment.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0 */5 * * * *",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "schedule_timezone",
+            "title": "Schedule timezone",
+            "type": "string",
+            "required": true,
+            "description": "Timezone for the cron expression",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683be1e4cc9ed75e19ff874e",
+      "title": "",
+      "description": "",
+      "localId": "2",
+      "typeId": "658ebb97261a2c01f648d4bd",
+      "params": [
+        {
+          "key": "user_params",
+          "type": "string_to_any",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 2,
+        "y": -115
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683be299ffe5d69f609ccd31",
+      "title": "Get All ElevenLabs Voices",
+      "description": "",
+      "localId": "4",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "access_key",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "...",
+            "text": "...",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/** @CustomParams\n{\n  \"access_key\": {\n    \"title\": \"API Access Key\",\n    \"key\": \"access_key\",\n    \"type\": \"string\"\n  }\n}\n*/\nimport axios from \"axios\";\n\nexport default async function run({ data }) {\n  const allVoices = [];\n  let hasMore = true;\n  let nextPageToken = undefined;\n  const headers = {\n    \"xi-api-key\": data.access_key,\n    \"Accept\": \"application/json\"\n  };\n  while (hasMore) {\n    let url = \"https://api.elevenlabs.io/v2/voices\";\n    if (nextPageToken) {\n      url += `?next_page_token=${encodeURIComponent(nextPageToken)}`;\n    }\n    const response = await axios.get(url, { headers });\n    if (Array.isArray(response.data.voices)) {\n      allVoices.push(...response.data.voices);\n    }\n    hasMore = !!response.data.has_more;\n    nextPageToken = response.data.next_page_token;\n    await new Promise(resolve => setTimeout(resolve, 1000));\n  }\n  return { voices: allVoices };\n}",
+            "text": "/** @CustomParams\n{\n  \"access_key\": {\n    \"title\": \"API Access Key\",\n    \"key\": \"access_key\",\n    \"type\": \"string\"\n  }\n}\n*/\nimport axios from \"axios\";\n\nexport default async function run({ data }) {\n  const allVoices = [];\n  let hasMore = true;\n  let nextPageToken = undefined;\n  const headers = {\n    \"xi-api-key\": data.access_key,\n    \"Accept\": \"application/json\"\n  };\n  while (hasMore) {\n    let url = \"https://api.elevenlabs.io/v2/voices\";\n    if (nextPageToken) {\n      url += `?next_page_token=${encodeURIComponent(nextPageToken)}`;\n    }\n    const response = await axios.get(url, { headers });\n    if (Array.isArray(response.data.voices)) {\n      allVoices.push(...response.data.voices);\n    }\n    hasMore = !!response.data.has_more;\n    nextPageToken = response.data.next_page_token;\n    await new Promise(resolve => setTimeout(resolve, 1000));\n  }\n  return { voices: allVoices };\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 198,
+        "y": -52
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "access_key",
+            "title": "API Access Key",
+            "type": "string",
+            "required": false,
+            "description": "Укажите ваш ElevenLabs API токен",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683be3c4cc9ed75e19ff875a",
+      "title": "Create and Update Voices in DB",
+      "description": "",
+      "localId": "5",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "database_id",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "text": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "collection_name",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "11labs_voices",
+            "text": "11labs_voices",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "voice_list",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{{$4.voices}}",
+            "text": "{{$4.voices}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/** @CustomParams\n{\n    \"database_id\": {\n        \"type\": \"string\",\n        \"title\": \"Database ID\",\n        \"description\": \"The ID of the database to connect to\"\n    },\n    \"collection_name\": {\n        \"type\": \"string\",\n        \"title\": \"Collection Name\",\n        \"description\": \"The name of the collection to search in\"\n    },\n    \"voice_list\": {\n        \"type\": \"string\",\n        \"title\": \"Voice List\"\n    }\n}\n*/\n\nimport _ from 'lodash';\n\nexport default async function run({ execution_id, input, data, db, store }) {\n    const voiceList = JSON.parse(data.voice_list);\n    let voicesProcessedCount = 0;\n    let voicesCreatedCount = 0;\n    let voicesUpdatedCount = 0;\n    let voicesMatchedCount = 0;\n\n    let createdCount = 0;\n    let updatedCount = 0;\n    let matchedCount = 0;\n    for (const voice of voiceList) {\n        const database_id = data.database_id;\n        const collection_name = data.collection_name;\n\n        const database = db.database(database_id);\n        const collection = database.collection(collection_name);\n\n        const isEqual = (obj1, obj2) => {\n            return _.isEqual(obj1, obj2);\n        };\n        \n\t\t\n        const filterObj = {\n            conditions: [\n                {\n                    operation: \"equal\",\n                    query: {\n                        path: \"voice_id\"\n                    },\n                    expected: {\n                        value: voice.voice_id\n                    }\n                }\n            ]\n        };\n\n        const objects = await collection.findObjects(10, 0, filterObj);\n\n        if (objects.length === 0) {\n            try {\n                await collection.createObject(voice);\n                createdCount++;\n            } catch (error) {\n                console.error(`Error creating object ${voice.voice_id}: ${error}`);\n            }\n        } else {\n            const existingObject = objects[0].value; // Assuming the actual item is within the 'value' field\n            if (!isEqual(existingObject, voice)) {\n                try {\n                    await collection.updateObjects(filterObj, voice);\n                    updatedCount++;\n                } catch (error) {\n                    console.error(`Error updating object with id ${item.id}: ${error}`);\n                }\n            } else {\n                matchedCount++; // matched exactly, no update needed\n            }\n        }\n    }\n\n    console.log(`Created ${createdCount} new records and updated ${updatedCount} records with ${matchedCount} not requiring an update.`);\n    voicesCreatedCount += createdCount;\n    voicesUpdatedCount += updatedCount;\n    voicesMatchedCount += matchedCount;\n    voicesProcessedCount += voiceList.length;\n\n    return {\n        status: 'Success',\n        total_voices_Processed: voicesProcessedCount,\n        created_voices: voicesCreatedCount,\n        updated_voices: voicesUpdatedCount,\n        no_Update_Needed: voicesMatchedCount\n    };\n}",
+            "text": "/** @CustomParams\n{\n    \"database_id\": {\n        \"type\": \"string\",\n        \"title\": \"Database ID\",\n        \"description\": \"The ID of the database to connect to\"\n    },\n    \"collection_name\": {\n        \"type\": \"string\",\n        \"title\": \"Collection Name\",\n        \"description\": \"The name of the collection to search in\"\n    },\n    \"voice_list\": {\n        \"type\": \"string\",\n        \"title\": \"Voice List\"\n    }\n}\n*/\n\nimport _ from 'lodash';\n\nexport default async function run({ execution_id, input, data, db, store }) {\n    const voiceList = JSON.parse(data.voice_list);\n    let voicesProcessedCount = 0;\n    let voicesCreatedCount = 0;\n    let voicesUpdatedCount = 0;\n    let voicesMatchedCount = 0;\n\n    let createdCount = 0;\n    let updatedCount = 0;\n    let matchedCount = 0;\n    for (const voice of voiceList) {\n        const database_id = data.database_id;\n        const collection_name = data.collection_name;\n\n        const database = db.database(database_id);\n        const collection = database.collection(collection_name);\n\n        const isEqual = (obj1, obj2) => {\n            return _.isEqual(obj1, obj2);\n        };\n        \n\t\t\n        const filterObj = {\n            conditions: [\n                {\n                    operation: \"equal\",\n                    query: {\n                        path: \"voice_id\"\n                    },\n                    expected: {\n                        value: voice.voice_id\n                    }\n                }\n            ]\n        };\n\n        const objects = await collection.findObjects(10, 0, filterObj);\n\n        if (objects.length === 0) {\n            try {\n                await collection.createObject(voice);\n                createdCount++;\n            } catch (error) {\n                console.error(`Error creating object ${voice.voice_id}: ${error}`);\n            }\n        } else {\n            const existingObject = objects[0].value; // Assuming the actual item is within the 'value' field\n            if (!isEqual(existingObject, voice)) {\n                try {\n                    await collection.updateObjects(filterObj, voice);\n                    updatedCount++;\n                } catch (error) {\n                    console.error(`Error updating object with id ${item.id}: ${error}`);\n                }\n            } else {\n                matchedCount++; // matched exactly, no update needed\n            }\n        }\n    }\n\n    console.log(`Created ${createdCount} new records and updated ${updatedCount} records with ${matchedCount} not requiring an update.`);\n    voicesCreatedCount += createdCount;\n    voicesUpdatedCount += updatedCount;\n    voicesMatchedCount += matchedCount;\n    voicesProcessedCount += voiceList.length;\n\n    return {\n        status: 'Success',\n        total_voices_Processed: voicesProcessedCount,\n        created_voices: voicesCreatedCount,\n        updated_voices: voicesUpdatedCount,\n        no_Update_Needed: voicesMatchedCount\n    };\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 360,
+        "y": -52
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "database_id",
+            "title": "Database ID",
+            "type": "string",
+            "required": false,
+            "description": "The ID of the database to connect to",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "collection_name",
+            "title": "Collection Name",
+            "type": "string",
+            "required": false,
+            "description": "The name of the collection to search in",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "voice_list",
+            "title": "Voice List",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    }
+  ],
+  "gateways": [
+    {
+      "nodeId": "683be1e4cc9ed75e19ff874e",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683be299ffe5d69f609ccd31",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "683be1aecc9ed75e19ff874c",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683be299ffe5d69f609ccd31",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "683be299ffe5d69f609ccd31",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683be3c4cc9ed75e19ff875a",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    }
+  ],
+  "version": "11",
+  "tags": [],
+  "release": true,
+  "latestLocalNodeId": "5",
+  "environments": [
+    {
+      "id": "683be1a3d7a848642232fd6d",
+      "alias": "prod",
+      "name": "Prod",
+      "actualVersion": "11",
+      "isActive": true
+    },
+    {
+      "id": "683be1a3d7a848642232fd6e",
+      "alias": "dev",
+      "name": "Dev",
+      "actualVersion": "11",
+      "isActive": true
+    }
+  ],
+  "nodulInfo": {
+    "isNodul": false,
+    "isPublic": false,
+    "isCodul": false
+  },
+  "readOnly": false,
+  "executionBucket": "execution_bucket_default",
+  "isUsersPublic": false
+}
