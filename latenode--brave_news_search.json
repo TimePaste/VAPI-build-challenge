@@ -1,0 +1,2669 @@
+{
+  "id": "683734268ea268bcb8e588d4",
+  "folderId": "6832329bee92a3567bbb30f3",
+  "title": "Brave News Search",
+  "description": "Searches news with a default freshness of the past day.",
+  "nodes": [
+    {
+      "id": "683734888ea268bcb8e588db",
+      "title": "",
+      "description": "",
+      "localId": "1",
+      "typeId": "62cc22317ae28c026d25692d",
+      "params": [
+        {
+          "key": "path",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "5fc788a9-5e30-4787-8dd6-7c97f40bf2e2",
+            "text": "5fc788a9-5e30-4787-8dd6-7c97f40bf2e2",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 0,
+        "y": 0
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683734888ea268bcb8e588dc",
+      "title": "",
+      "description": "",
+      "localId": "3",
+      "typeId": "62cc22317ae28c026d25692e",
+      "params": [
+        {
+          "key": "status",
+          "type": "int",
+          "value": {
+            "stringToString": [],
+            "int": "200",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "headers",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              }
+            ],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "body",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\"summary\": {{jsonStringify($4.result.choices.[0].message.content)}}}",
+            "text": "{\"summary\": {{jsonStringify($4.result.choices.[0].message.content)}}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 678,
+        "y": 0
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "status",
+            "title": "Код ответа",
+            "type": "int",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": {
+                "max": 599,
+                "min": 200,
+                "fetchOn": []
+              },
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "200",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "headers",
+            "title": "Заголовки ответа",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": {
+                "maxCount": 0,
+                "fixedSize": false,
+                "fetchOn": [],
+                "allowEmpty": false
+              },
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                }
+              ],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "body",
+            "title": "Тело ответа",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683734888ea268bcb8e588dd",
+      "title": "",
+      "description": "",
+      "localId": "4",
+      "typeId": "680b9ecfffbfa146fc84decd",
+      "params": [
+        {
+          "key": "provider",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "google"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "modality",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "text"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "isFree",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "model",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "google/gemma-3-27b-it:free"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "userPrompt",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "Summarize the following news stories in a concise format without introductory phrases. Avoid any introductory phrases.\n\n{{5.search_response.results}}",
+            "text": "Summarize the following news stories in a concise format without introductory phrases. Avoid any introductory phrases.\n\n{{5.search_response.results}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "isAutoRouteSelected",
+          "type": "bool",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": true,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "models",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "google/gemini-2.0-flash-001",
+              "google/gemini-2.5-pro-preview"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "fileContent",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "dialogHistoryJSON",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "webSearch",
+          "type": "bool",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "webSearchContextSize",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "maxTokens",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "temperature",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "seed",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topP",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "1",
+            "text": "1",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topK",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "frequencyPenalty",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "presencePenalty",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "repetitionPenalty",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "1",
+            "text": "1",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "stop",
+          "type": "string_array",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "logitBias",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "logprobs",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topLogprobs",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "minP",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topA",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "responseFormatJSON",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "toolsJSON",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "reasoningEffort",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "reasoningMaxTokens",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "reasoningExclude",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "false"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 452,
+        "y": 0
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "provider",
+            "title": "Provider",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "google",
+                    "value": "google"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": true
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "OpenAI"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "modality",
+            "title": "Input Modality",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "text",
+                    "value": "TEXT"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "all modalities"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "isFree",
+            "title": "Payment Options",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "model",
+            "title": "Model ID",
+            "type": "select",
+            "required": false,
+            "description": "When the \"Model ID\" field is filled in, the \"Auto Router\" toggle is ignored. Either the \"Model ID\" field must be filled in, or the \"Auto Router\" toggle must be enabled.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "google/gemma-3-27b-it:free",
+                    "value": "google/gemma-3-27b-it:free"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": true
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "openai/gpt-4.1-nano"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "userPrompt",
+            "title": "User Prompt",
+            "type": "string",
+            "required": false,
+            "description": "Your new question prompt: please note that at least one of the \"User Prompt\", \"Dialogue History\"",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "Hello! Let's talk about the following: {query}",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "isAutoRouteSelected",
+            "title": "Auto Router",
+            "type": "bool",
+            "required": false,
+            "description": "Enables automatic selection of an alternative model from the \"Models Rerouting\" list. When disabled, the routing logic is skipped.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": true,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "models",
+            "title": "Models Rerouting",
+            "type": "select",
+            "required": false,
+            "description": "If the primary model's providers are down, rate-limited, or refuse to reply due to content moderation, then the chosen models will be used",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "google/gemini-2.0-flash-001",
+                    "value": "google/gemini-2.0-flash-001"
+                  },
+                  {
+                    "key": "google/gemini-2.5-pro-preview",
+                    "value": "google/gemini-2.5-pro-preview"
+                  }
+                ],
+                "multiple": true,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": true
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "fileContent",
+            "title": "File Content",
+            "type": "string",
+            "required": false,
+            "description": "Enter a URL (e.g., https://example.png) or select file content from the data pop-up window (e.g., 1.body.files.[0].content)",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "dialogHistoryJSON",
+            "title": "Dialog History JSON",
+            "type": "string",
+            "required": false,
+            "description": "Valid JSON containing [the array of objects](https://openrouter.ai/docs/api-reference/chat-completion#request.body.messages), e.g. [{\"role\":\"user\",\"content\":\"Hello!\"}, {\"role\": \"assistant\", \"content\": \"Hi there! How can I help you today?\"}]  \n    role can be one of (**the roles should alternate**):  \n    system - the message author role is system;  \n    developer - an OpenAI specific role that replaces system in newer models;\n    user - the message author role is user;  \n    assistant - the message author role is assistant;  \n    tool - the message author role is tool.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "webSearch",
+            "title": "Web Search",
+            "type": "bool",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "webSearchContextSize",
+            "title": "Search Context Size",
+            "type": "select",
+            "required": false,
+            "description": "Amount of web content used to help the tool answer your question. Applies only to these [models](https://openrouter.ai/models?fmt=cards&supported_parameters=web_search_options).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "maxTokens",
+            "title": "Max Tokens",
+            "type": "string",
+            "required": false,
+            "description": "An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and reasoning tokens.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "temperature",
+            "title": "Temperature",
+            "type": "string",
+            "required": false,
+            "description": "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or \"Top P\" but not both. [Read more](https://openrouter.ai/docs/api-reference/parameters#temperature).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "seed",
+            "title": "Seed",
+            "type": "string",
+            "required": false,
+            "description": "Repeated requests with the same seed and parameters return the same result. Determinism is not guaranteed for some models. [Read more](https://openrouter.ai/docs/api-reference/parameters#seed).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topP",
+            "title": "Top P",
+            "type": "string",
+            "required": false,
+            "description": "Number between 0 and 1. An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with \"Top P\" probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or \"Temperature\" but not both. [Read mode](https://openrouter.ai/docs/api-reference/parameters#top-p).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "1",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topK",
+            "title": "Top K",
+            "type": "string",
+            "required": false,
+            "description": "Limits the model’s choice of tokens at each step, making it choose from a smaller set. [Read more](https://openrouter.ai/docs/api-reference/parameters#top-k).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "frequencyPenalty",
+            "title": "Frequency Penalty",
+            "type": "string",
+            "required": false,
+            "description": "Number between -2.0 and 2.0. Controlling the repetition of tokens based on how often they appear in the input. [Read more](https://openrouter.ai/docs/api-reference/parameters#frequency-penalty).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "presencePenalty",
+            "title": "Presence Penalty",
+            "type": "string",
+            "required": false,
+            "description": "Number between -2.0 and 2.0. Repeats specific tokens already used in the input. [Read more](https://openrouter.ai/docs/api-reference/parameters#presence-penalty).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "repetitionPenalty",
+            "title": "Repetition Penalty",
+            "type": "string",
+            "required": false,
+            "description": "Number between 0.0 and 2.0. Reduces the likelihood of the model repeating words or phrases. A higher value makes the output more varied by discouraging repetition. [Read more](https://openrouter.ai/docs/api-reference/parameters#repetition-penalty).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "1",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "stop",
+            "title": "Stop Sequences",
+            "type": "string_array",
+            "required": false,
+            "description": "Stop generation immediately if the model encounter any token specified in the stop array",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "logitBias",
+            "title": "Logit Bias",
+            "type": "string_to_string",
+            "required": false,
+            "description": "Adjusts the likelihood of specific tokens being selected by modifying their logits. Values range from -100 to 100. [Read more](https://openrouter.ai/docs/api-reference/parameters#logit-bias). For example: In the 'Key' field, enter \"-80\", in the 'Value' field, enter \"10\".",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "logprobs",
+            "title": "Logprobs",
+            "type": "select",
+            "required": false,
+            "description": "Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topLogprobs",
+            "title": "Top Logprobs",
+            "type": "string",
+            "required": false,
+            "description": "Number of most likely tokens to return at each token position, each with an associated log probability",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "minP",
+            "title": "Min P",
+            "type": "string",
+            "required": false,
+            "description": "Minimum probability for a token to be considered, relative to the probability of the most likely token. [Read more](https://openrouter.ai/docs/api-reference/parameters#min-p).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topA",
+            "title": "Top A",
+            "type": "string",
+            "required": false,
+            "description": "Consider only the top tokens with \"sufficiently high\" probabilities based on the probability of the most likely token. [Read more](https://openrouter.ai/docs/api-reference/parameters#top-a).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "responseFormatJSON",
+            "title": "Response Format JSON",
+            "type": "string",
+            "required": false,
+            "description": "For example: { \"type\": \"json_schema\", \"json_schema\": { \"name\": \"weather\", \"strict\": true, \"schema\": { \"type\": \"object\", \"properties\": { \"location\": { \"type\": \"string\", \"description\": \"City or location name\" }, \"temperature\": { \"type\": \"number\", \"description\": \"Temperature in Celsius\" }, \"conditions\": { \"type\": \"string\", \"description\": \"Weather conditions description\" } }, \"required\": [\"location\", \"temperature\", \"conditions\"], \"additionalProperties\": false } } }  \n    [Read more](https://openrouter.ai/docs/features/structured-outputs).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "toolsJSON",
+            "title": "Tools JSON",
+            "type": "string",
+            "required": false,
+            "description": "For example: [{\"type\":\"function\",\"function\":{\"name\":\"search_gutenberg_books\",\"description\":\"Search for books in the Project Gutenberg library based on specified search terms\",\"parameters\":{\"type\":\"object\",\"properties\":{\"search_terms\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"List of search terms to find books in the Gutenberg library (e.g. ['dickens', 'great'] to search for books by Dickens with 'great' in the title)\"}},\"required\":[\"search_terms\"]}}}]  \n    [Read more](https://openrouter.ai/docs/features/tool-calling).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "reasoningEffort",
+            "title": "Reasoning Effort",
+            "type": "select",
+            "required": false,
+            "description": "OpenAI-style reasoning effort setting",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "reasoningMaxTokens",
+            "title": "Reasoning Max Tokens",
+            "type": "string",
+            "required": false,
+            "description": "Non-OpenAI-style reasoning effort setting. Cannot be used simultaneously with effort.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "reasoningExclude",
+            "title": "Reasoning Exclude",
+            "type": "select",
+            "required": false,
+            "description": "Whether to exclude reasoning from the response",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "false",
+                    "value": "FALSE"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "false"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": {
+          "environment": "",
+          "isPd": true,
+          "isJsn": true,
+          "pdAvailableGetLastRecords": false
+        },
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683734888ea268bcb8e588de",
+      "title": "",
+      "description": "",
+      "localId": "5",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "access_key",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "...",
+            "text": "...",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "query",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{{$1.body.q}}",
+            "text": "{{$1.body.q}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "freshness",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{{$1.body.freshness}}",
+            "text": "{{$1.body.freshness}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/** @CustomParams\n{\n  \"access_key\": {\n    \"title\": \"Brave API Access Token\",\n    \"key\": \"access_key\",\n    \"description\": \"Your Brave Search API subscription token (x-subscription-token header)\",\n    \"type\": \"string\"\n  },\n  \"query\": {\n    \"title\": \"Query String\",\n    \"key\": \"query\",\n    \"description\": \"The search query you want to use\",\n    \"type\": \"string\"\n  },\n  \"freshness\": {\n    \"title\": \"Freshness\",\n    \"key\": \"freshness\",\n    \"description\": \"Freshness filter (pd=past day, pw=past week, pm=past month, py=past year)\",\n    \"type\": \"string\"\n  }\n}\n*/\nimport axios from \"axios\";\n\nexport default async function run({ data }) {\n  try {\n    // Step 1: Perform search (node 7 functionality)\n    const freshness = data.freshness === \"null\" || data.freshness == null ?  \"pd\" : data.freshness;\n    const searchResponse = await axios({\n      method: \"GET\",\n      url: \"https://api.search.brave.com/res/v1/news/search\",\n      headers: {\n        \"Accept\": \"application/json\",\n        \"Accept-Encoding\": \"gzip\",\n        \"x-subscription-token\": data.access_key\n      },\n      params: {\n        q: data.query,\n        count: 5,\n        safesearch: \"strict\",\n        spellcheck: false,\n        freshness: freshness\n      }\n    });\n\n\n    return {\n      search_response: searchResponse.data\n    };\n\n  } catch (error) {\n    return { \n      error: `API request failed: ${error.message}`,\n      details: error.response?.data || error.stack\n    };\n  }\n}",
+            "text": "/** @CustomParams\n{\n  \"access_key\": {\n    \"title\": \"Brave API Access Token\",\n    \"key\": \"access_key\",\n    \"description\": \"Your Brave Search API subscription token (x-subscription-token header)\",\n    \"type\": \"string\"\n  },\n  \"query\": {\n    \"title\": \"Query String\",\n    \"key\": \"query\",\n    \"description\": \"The search query you want to use\",\n    \"type\": \"string\"\n  },\n  \"freshness\": {\n    \"title\": \"Freshness\",\n    \"key\": \"freshness\",\n    \"description\": \"Freshness filter (pd=past day, pw=past week, pm=past month, py=past year)\",\n    \"type\": \"string\"\n  }\n}\n*/\nimport axios from \"axios\";\n\nexport default async function run({ data }) {\n  try {\n    // Step 1: Perform search (node 7 functionality)\n    const freshness = data.freshness === \"null\" || data.freshness == null ?  \"pd\" : data.freshness;\n    const searchResponse = await axios({\n      method: \"GET\",\n      url: \"https://api.search.brave.com/res/v1/news/search\",\n      headers: {\n        \"Accept\": \"application/json\",\n        \"Accept-Encoding\": \"gzip\",\n        \"x-subscription-token\": data.access_key\n      },\n      params: {\n        q: data.query,\n        count: 5,\n        safesearch: \"strict\",\n        spellcheck: false,\n        freshness: freshness\n      }\n    });\n\n\n    return {\n      search_response: searchResponse.data\n    };\n\n  } catch (error) {\n    return { \n      error: `API request failed: ${error.message}`,\n      details: error.response?.data || error.stack\n    };\n  }\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 226,
+        "y": 0
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "access_key",
+            "title": "Brave API Access Token",
+            "type": "string",
+            "required": false,
+            "description": "Your Brave Search API subscription token (x-subscription-token header)",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "query",
+            "title": "Query String",
+            "type": "string",
+            "required": false,
+            "description": "The search query you want to use",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "freshness",
+            "title": "Freshness",
+            "type": "string",
+            "required": false,
+            "description": "Freshness filter (pd=past day, pw=past week, pm=past month, py=past year)",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683dc4ff69bc1858faccaa02",
+      "title": "",
+      "description": "",
+      "localId": "6",
+      "typeId": "62cc22317ae28c026d25692e",
+      "params": [
+        {
+          "key": "status",
+          "type": "int",
+          "value": {
+            "stringToString": [],
+            "int": "200",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "headers",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              }
+            ],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "body",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\"summary\": \"There were no search results for that topic.\"}",
+            "text": "{\"summary\": \"There were no search results for that topic.\"}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 433,
+        "y": 131
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "status",
+            "title": "Код ответа",
+            "type": "int",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": {
+                "max": 599,
+                "min": 200,
+                "fetchOn": []
+              },
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "200",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "headers",
+            "title": "Заголовки ответа",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": {
+                "maxCount": 0,
+                "fixedSize": false,
+                "fetchOn": [],
+                "allowEmpty": false
+              },
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                }
+              ],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "body",
+            "title": "Тело ответа",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    }
+  ],
+  "gateways": [
+    {
+      "nodeId": "683734888ea268bcb8e588dd",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683734888ea268bcb8e588dc",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "683734888ea268bcb8e588de",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": "{{not(empty(5.search_response.results))}}"
+            }
+          },
+          "label": "has search results",
+          "nodeId": "683734888ea268bcb8e588dd",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        },
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683dc4ff69bc1858faccaa02",
+          "localNodeId": "",
+          "isFallback": true,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "683734888ea268bcb8e588db",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683734888ea268bcb8e588de",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    }
+  ],
+  "version": "20",
+  "tags": [],
+  "release": true,
+  "latestLocalNodeId": "6",
+  "environments": [
+    {
+      "id": "683734268ea268bcb8e588d5",
+      "alias": "prod",
+      "name": "Prod",
+      "actualVersion": "20",
+      "isActive": true
+    },
+    {
+      "id": "683734268ea268bcb8e588d6",
+      "alias": "dev",
+      "name": "Dev",
+      "actualVersion": "20",
+      "isActive": true
+    }
+  ],
+  "nodulInfo": {
+    "isNodul": false,
+    "isPublic": false,
+    "isCodul": false
+  },
+  "readOnly": false,
+  "executionBucket": "execution_bucket_default",
+  "isUsersPublic": false
+}
