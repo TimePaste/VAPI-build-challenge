@@ -1,0 +1,1107 @@
+{
+  "id": "6838cc9442755fa2f34c247a",
+  "folderId": "6832329bee92a3567bbb30f3",
+  "title": "Set Preferred Agent",
+  "description": "",
+  "nodes": [
+    {
+      "id": "6838cd6242755fa2f34c248c",
+      "title": "",
+      "description": "",
+      "localId": "1",
+      "typeId": "62cc22317ae28c026d25692d",
+      "params": [
+        {
+          "key": "path",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0f740d44-bb91-4581-89ba-f04a7e696a1a",
+            "text": "0f740d44-bb91-4581-89ba-f04a7e696a1a",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 11,
+        "y": 15
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "6838cd6242755fa2f34c248d",
+      "title": "",
+      "description": "",
+      "localId": "3",
+      "typeId": "62cc22317ae28c026d25692e",
+      "params": [
+        {
+          "key": "status",
+          "type": "int",
+          "value": {
+            "stringToString": [],
+            "int": "200",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "headers",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              }
+            ],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "body",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 452,
+        "y": 13
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "6839489542755fa2f34c2622",
+      "title": "Find Customer",
+      "description": "",
+      "localId": "5",
+      "typeId": "66bf657a22e621de86cbee7c",
+      "params": [
+        {
+          "key": "storage_name",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "text": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "collection_name",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "user_info",
+            "text": "user_info",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "filter",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "conditions:\n  - operation: equal\n    query:\n      path: phone_number\n    expected:\n      value: \"{{1.body.message.customer.number}}\"",
+            "text": "conditions:\n  - operation: equal\n    query:\n      path: phone_number\n    expected:\n      value: \"{{1.body.message.customer.number}}\"",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "limit",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "offset",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 141,
+        "y": 14
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "storage_name",
+            "title": "Storage ID",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "collection_name",
+            "title": "Collection name",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "filter",
+            "title": "Filter",
+            "type": "text",
+            "required": false,
+            "description": "Filter in YAML format. For details see [documentation](https://docs.latenode.com/docs/4eb52adf-0357-46a9-b85d-872b79ced50e/)",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "limit",
+            "title": "Limit",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "offset",
+            "title": "Offset",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683948a59a7b3e043f97d0c2",
+      "title": "",
+      "description": "",
+      "localId": "6",
+      "typeId": "66f444735e843b54d9156916",
+      "params": [
+        {
+          "key": "storage_name",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "text": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "collection_name",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "user_info",
+            "text": "user_info",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "object_id",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{{5.result.[0].object_id}}",
+            "text": "{{5.result.[0].object_id}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "object_value",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\"preferred_agent\": {{jsonStringify(1.body.message.toolCalls.[0].function.arguments.preferred_agent)}}}",
+            "text": "{\"preferred_agent\": {{jsonStringify(1.body.message.toolCalls.[0].function.arguments.preferred_agent)}}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "replace",
+          "type": "bool",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 293,
+        "y": 110
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "storage_name",
+            "title": "Storage ID",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "collection_name",
+            "title": "Collection name",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "object_id",
+            "title": "Object ID",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "object_value",
+            "title": "Value",
+            "type": "text",
+            "required": true,
+            "description": "Object fields values in JSON format. Ex. `{\"a\":\"b\",\"c\":[1,2,3]}`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "replace",
+            "title": "Replace whole object",
+            "type": "bool",
+            "required": false,
+            "description": "If this flag enabled whole object value will be replaced, otherwise only specified fields will be updated",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": true,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "683948a59a7b3e043f97d0c3",
+      "title": "",
+      "description": "",
+      "localId": "7",
+      "typeId": "66bf657a22e621de86cbee7b",
+      "params": [
+        {
+          "key": "storage_name",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "text": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "collection_name",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "user_info",
+            "text": "user_info",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "object",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\"phone_number\": {{jsonStringify(1.body.message.customer.number)}},\"preferred_agent\": {{jsonStringify(1.body.message.toolCalls.[0].function.arguments.preferred_agent)}}}",
+            "text": "{\"phone_number\": {{jsonStringify(1.body.message.customer.number)}},\"preferred_agent\": {{jsonStringify(1.body.message.toolCalls.[0].function.arguments.preferred_agent)}}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 295,
+        "y": -91
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "storage_name",
+            "title": "Storage ID",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "collection_name",
+            "title": "Collection name",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "object",
+            "title": "Object",
+            "type": "text",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    }
+  ],
+  "gateways": [
+    {
+      "nodeId": "6838cd6242755fa2f34c248c",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "6839489542755fa2f34c2622",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "683948a59a7b3e043f97d0c3",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "6838cd6242755fa2f34c248d",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "683948a59a7b3e043f97d0c2",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "6838cd6242755fa2f34c248d",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "6839489542755fa2f34c2622",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": "{{empty(5.result)}}"
+            }
+          },
+          "label": "no result",
+          "nodeId": "683948a59a7b3e043f97d0c3",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        },
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "683948a59a7b3e043f97d0c2",
+          "localNodeId": "",
+          "isFallback": true,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    }
+  ],
+  "version": "20",
+  "tags": [],
+  "release": true,
+  "latestLocalNodeId": "7",
+  "environments": [
+    {
+      "id": "6838cc9442755fa2f34c247b",
+      "alias": "prod",
+      "name": "Prod",
+      "actualVersion": "20",
+      "isActive": true
+    },
+    {
+      "id": "6838cc9442755fa2f34c247c",
+      "alias": "dev",
+      "name": "Dev",
+      "actualVersion": "20",
+      "isActive": true
+    }
+  ],
+  "nodulInfo": {
+    "isNodul": false,
+    "isPublic": false,
+    "isCodul": false
+  },
+  "readOnly": false,
+  "executionBucket": "execution_bucket_default",
+  "isUsersPublic": false
+}
