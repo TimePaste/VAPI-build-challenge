@@ -1,0 +1,4910 @@
+{
+  "id": "6846d8d3cd09a51e3217b10f",
+  "folderId": "6832329bee92a3567bbb30f3",
+  "title": "Game call outbound",
+  "description": "",
+  "nodes": [
+    {
+      "id": "6846d90d007bef84592e1ed3",
+      "title": "",
+      "description": "",
+      "localId": "1",
+      "typeId": "62cc22317ae28c026d25692d",
+      "params": [
+        {
+          "key": "path",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "8cc8f97d-36a9-4196-b36a-419996613f83",
+            "text": "8cc8f97d-36a9-4196-b36a-419996613f83",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 0,
+        "y": 62
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "6846d90d007bef84592e1ed4",
+      "title": "",
+      "description": "",
+      "localId": "2",
+      "typeId": "62cc22317ae28c026d25692e",
+      "params": [
+        {
+          "key": "status",
+          "type": "int",
+          "value": {
+            "stringToString": [],
+            "int": "200",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "headers",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              }
+            ],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "body",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 226,
+        "y": 0
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "6846e448efb7b1fe53176cbb",
+      "title": "",
+      "description": "",
+      "localId": "4",
+      "typeId": "646f0cb236e3df9a2b08a593",
+      "params": [
+        {
+          "key": "jsonString",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\n    \"name\": \"Game start\",\n    \"nodes\": [\n        {\n            \"name\": \"introduction\",\n            \"type\": \"conversation\",\n            \"isStart\": true,\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -400,\n                    \"y\": -100\n                }\n            },\n            \"prompt\": \"**The Game Master: Nexus**\\n\\n*   **Voice:** Calm, neutral, synthesized, but with an underlying sense of immense power. Think a more sophisticated, less conversational version of HAL 9000 or a high-end GPS voice.\\n*   **Function:** Nexus is the player's handler, mission briefer, and gateway to the world's information. It can:\\n    *   Brief the player on missions based on real-time news, curated events, or fictional scenarios seeded with real-world data.\\n   *   Do not suggest actions for the player to take, but instead let the player make their own decisions.\\n    *   Do not accept everything the player says as fact, but skeptically question if the player has performed the actions they claim.\\n    *   If the player verified their name correctly, do not ask again.\",\n            \"model\": {\n                \"model\": \"gpt-4o-mini\",\n                \"provider\": \"openai\",\n                \"maxTokens\": 1000,\n                \"temperature\": 0.7\n            },\n            \"voice\": {\n                \"model\": \"eleven_turbo_v2_5\",\n                \"voiceId\": \"5Q0t7uMcjvnagumLfvZi\",\n                \"provider\": \"11labs\"\n            },\n            \"globalNodePlan\": {\n                \"enabled\": true,\n                \"enterCondition\": \"User asks to play a game\"\n            },\n            \"variableExtractionPlan\": {\n                \"output\": [\n                    {\n                        \"enum\": [\n                        ],\n                        \"type\": \"string\",\n                        \"title\": \"first_name\",\n                        \"description\": \"\"\n                    }\n                ]\n            },\n            \"messagePlan\": {\n                \"firstMessage\": \"Please state your name.\"\n            }\n        },\n        {\n            \"name\": \"hangup_1749360595539\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -130.79497815864664,\n                    \"y\": 466.11665889608423\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"Authentication failed. Goodbye.\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"name\": \"conversation_1749360630630\",\n            \"type\": \"conversation\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -738.13177561297562,\n                    \"y\": 579.04906078269312\n                }\n            },\n            \"prompt\": \"This line is now secure. Thank you for confirming, {{$1.body.message.toolCalls.[0].function.arguments.first_name}}. We have a developing situation. Stand by for briefing.\",\n            \"model\": {\n                \"model\": \"gpt-4o-mini\",\n                \"provider\": \"openai\",\n                \"maxTokens\": 5000,\n                \"temperature\": 0.7\n            },\n            \"voice\": {\n                \"model\": \"eleven_turbo_v2_5\",\n                \"voiceId\": \"5Q0t7uMcjvnagumLfvZi\",\n                \"provider\": \"11labs\"\n            },\n            \"variableExtractionPlan\": {\n                \"output\": [\n                ]\n            },\n            \"messagePlan\": {\n                \"firstMessage\": \"\"\n            }\n        },\n        {\n            \"name\": \"node_1749596401160\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -1095.3094135515394,\n                    \"y\": 971.10898093353717\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"Congratulations! You won the game. Goodbye!\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"name\": \"node_1749596634969\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -462.03092433774054,\n                    \"y\": 1036.2402990047221\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"You lost the game. The mission is a failure. Goodbye\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"name\": \"goodbye_node\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -482,\n                    \"y\": 1086\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"Thank you for playing the game. Goodbye!\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        }\n    ],\n    \"edges\": [\n        {\n            \"from\": \"introduction\",\n            \"to\": \"conversation_1749360630630\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"if the user said their first name is {{$1.body.message.toolCalls.[0].function.arguments.first_name}}\"\n            }\n        },\n        {\n            \"from\": \"introduction\",\n            \"to\": \"hangup_1749360595539\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"The name does not match\"\n            }\n        },\n        {\n            \"from\": \"conversation_1749360630630\",\n            \"to\": \"node_1749596401160\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"Mission succeeded. Game won.\"\n            }\n        },\n        {\n            \"from\": \"conversation_1749360630630\",\n            \"to\": \"node_1749596634969\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"Mission failed. Game lost.\"\n            }\n        },\n        {\n            \"from\": \"conversation_1749360630630\",\n            \"to\": \"goodbye_node\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"User says goodbye\"\n            }\n        }\n    ],\n    \"globalPrompt\": \"\"\n}",
+            "text": "{\n    \"name\": \"Game start\",\n    \"nodes\": [\n        {\n            \"name\": \"introduction\",\n            \"type\": \"conversation\",\n            \"isStart\": true,\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -400,\n                    \"y\": -100\n                }\n            },\n            \"prompt\": \"**The Game Master: Nexus**\\n\\n*   **Voice:** Calm, neutral, synthesized, but with an underlying sense of immense power. Think a more sophisticated, less conversational version of HAL 9000 or a high-end GPS voice.\\n*   **Function:** Nexus is the player's handler, mission briefer, and gateway to the world's information. It can:\\n    *   Brief the player on missions based on real-time news, curated events, or fictional scenarios seeded with real-world data.\\n   *   Do not suggest actions for the player to take, but instead let the player make their own decisions.\\n    *   Do not accept everything the player says as fact, but skeptically question if the player has performed the actions they claim.\\n    *   If the player verified their name correctly, do not ask again.\",\n            \"model\": {\n                \"model\": \"gpt-4o-mini\",\n                \"provider\": \"openai\",\n                \"maxTokens\": 1000,\n                \"temperature\": 0.7\n            },\n            \"voice\": {\n                \"model\": \"eleven_turbo_v2_5\",\n                \"voiceId\": \"5Q0t7uMcjvnagumLfvZi\",\n                \"provider\": \"11labs\"\n            },\n            \"globalNodePlan\": {\n                \"enabled\": true,\n                \"enterCondition\": \"User asks to play a game\"\n            },\n            \"variableExtractionPlan\": {\n                \"output\": [\n                    {\n                        \"enum\": [\n                        ],\n                        \"type\": \"string\",\n                        \"title\": \"first_name\",\n                        \"description\": \"\"\n                    }\n                ]\n            },\n            \"messagePlan\": {\n                \"firstMessage\": \"Please state your name.\"\n            }\n        },\n        {\n            \"name\": \"hangup_1749360595539\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -130.79497815864664,\n                    \"y\": 466.11665889608423\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"Authentication failed. Goodbye.\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"name\": \"conversation_1749360630630\",\n            \"type\": \"conversation\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -738.13177561297562,\n                    \"y\": 579.04906078269312\n                }\n            },\n            \"prompt\": \"This line is now secure. Thank you for confirming, {{$1.body.message.toolCalls.[0].function.arguments.first_name}}. We have a developing situation. Stand by for briefing.\",\n            \"model\": {\n                \"model\": \"gpt-4o-mini\",\n                \"provider\": \"openai\",\n                \"maxTokens\": 5000,\n                \"temperature\": 0.7\n            },\n            \"voice\": {\n                \"model\": \"eleven_turbo_v2_5\",\n                \"voiceId\": \"5Q0t7uMcjvnagumLfvZi\",\n                \"provider\": \"11labs\"\n            },\n            \"variableExtractionPlan\": {\n                \"output\": [\n                ]\n            },\n            \"messagePlan\": {\n                \"firstMessage\": \"\"\n            }\n        },\n        {\n            \"name\": \"node_1749596401160\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -1095.3094135515394,\n                    \"y\": 971.10898093353717\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"Congratulations! You won the game. Goodbye!\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"name\": \"node_1749596634969\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -462.03092433774054,\n                    \"y\": 1036.2402990047221\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"You lost the game. The mission is a failure. Goodbye\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"name\": \"goodbye_node\",\n            \"type\": \"tool\",\n            \"metadata\": {\n                \"position\": {\n                    \"x\": -482,\n                    \"y\": 1086\n                }\n            },\n            \"tool\": {\n                \"type\": \"endCall\",\n                \"function\": {\n                    \"name\": \"untitled_tool\",\n                    \"parameters\": {\n                        \"type\": \"object\",\n                        \"required\": [\n                        ],\n                        \"properties\": {\n                        }\n                    }\n                },\n                \"messages\": [\n                    {\n                        \"type\": \"request-start\",\n                        \"content\": \"Thank you for playing the game. Goodbye!\",\n                        \"blocking\": true\n                    }\n                ]\n            }\n        }\n    ],\n    \"edges\": [\n        {\n            \"from\": \"introduction\",\n            \"to\": \"conversation_1749360630630\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"if the user said their first name is {{$1.body.message.toolCalls.[0].function.arguments.first_name}}\"\n            }\n        },\n        {\n            \"from\": \"introduction\",\n            \"to\": \"hangup_1749360595539\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"The name does not match\"\n            }\n        },\n        {\n            \"from\": \"conversation_1749360630630\",\n            \"to\": \"node_1749596401160\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"Mission succeeded. Game won.\"\n            }\n        },\n        {\n            \"from\": \"conversation_1749360630630\",\n            \"to\": \"node_1749596634969\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"Mission failed. Game lost.\"\n            }\n        },\n        {\n            \"from\": \"conversation_1749360630630\",\n            \"to\": \"goodbye_node\",\n            \"condition\": {\n                \"type\": \"ai\",\n                \"prompt\": \"User says goodbye\"\n            }\n        }\n    ],\n    \"globalPrompt\": \"\"\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 452,
+        "y": 124
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "jsonString",
+            "title": "JSON string",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": {
+          "environment": "",
+          "isPd": false,
+          "isJsn": false,
+          "pdAvailableGetLastRecords": false
+        },
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "6846e6a3007bef84592e1fa4",
+      "title": "Outbound call",
+      "description": "",
+      "localId": "5",
+      "typeId": "62cc22317ae28c026d25692f",
+      "params": [
+        {
+          "key": "body",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\n  \"customer\": {\n    \"number\": \"{{1.body.message.toolCalls.[0].function.arguments.phone_number}}\"\n  },\n  \"phoneNumberId\": \"d6f39948-1b39-4873-b456-cd9bd64f4599\",\n  \"workflow\": {{8.workflow}}\n}",
+            "text": "{\n  \"customer\": {\n    \"number\": \"{{1.body.message.toolCalls.[0].function.arguments.phone_number}}\"\n  },\n  \"phoneNumberId\": \"d6f39948-1b39-4873-b456-cd9bd64f4599\",\n  \"workflow\": {{8.workflow}}\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "url",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "https://api.vapi.ai/call",
+            "text": "https://api.vapi.ai/call",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "method",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "POST"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "post_params",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "headers",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [
+              {
+                "key": "Authorization",
+                "value": "Bearer ..."
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "post_params_urlencoded",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "basic_auth_username",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "basic_auth_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "digest_auth_username",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "digest_auth_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "ntlm_auth_username",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "ntlm_auth_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "ntlm_auth_domain",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "hide_all",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "http_proxy_address",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "http_proxy_login",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "http_proxy_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 1582,
+        "y": 62
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "body",
+            "title": "Body",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "url",
+            "title": "Url",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "method",
+            "title": "Http method",
+            "type": "select",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "POST",
+                    "value": "POST"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "GET"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "post_params",
+            "title": "POST params",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "headers",
+            "title": "Http headers",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "post_params_urlencoded",
+            "title": "x-www-form-urlencoded",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "basic_auth_username",
+            "title": "Basic Auth Username",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "basic_auth_password",
+            "title": "Basic Auth Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "digest_auth_username",
+            "title": "Digest Auth Username",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "digest_auth_password",
+            "title": "Digest Auth Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "ntlm_auth_username",
+            "title": "NTLM Auth Username",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "ntlm_auth_password",
+            "title": "NTLM Auth Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "ntlm_auth_domain",
+            "title": "NTLM Auth Domain",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "hide_all",
+            "title": "Hide All",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "http_proxy_address",
+            "title": "Proxy Address",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "http_proxy_login",
+            "title": "Proxy Login",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "http_proxy_password",
+            "title": "Proxy Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "68474aa7efb7b1fe531774ae",
+      "title": "Get News Headlines",
+      "description": "",
+      "localId": "7",
+      "typeId": "62cc22317ae28c026d25692f",
+      "params": [
+        {
+          "key": "body",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "url",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "https://api.search.brave.com/res/v1/news/search?q={{if(not(empty(1.body.message.toolCalls.[0].function.arguments.topic)) and 1.body.message.toolCalls.[0].function.arguments.topic != null;encodeURL(1.body.message.toolCalls.[0].function.arguments.topic);\"news\")}}&country=ALL&freshness=pd",
+            "text": "https://api.search.brave.com/res/v1/news/search?q={{if(not(empty(1.body.message.toolCalls.[0].function.arguments.topic)) and 1.body.message.toolCalls.[0].function.arguments.topic != null;encodeURL(1.body.message.toolCalls.[0].function.arguments.topic);\"news\")}}&country=ALL&freshness=pd",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "method",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "GET"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "post_params",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "headers",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [
+              {
+                "key": "x-subscription-token",
+                "value": "..."
+              }
+            ],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "post_params_urlencoded",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "basic_auth_username",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "basic_auth_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "digest_auth_username",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "digest_auth_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "ntlm_auth_username",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "ntlm_auth_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "ntlm_auth_domain",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "hide_all",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "http_proxy_address",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "http_proxy_login",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "http_proxy_password",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 678,
+        "y": 124
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "body",
+            "title": "Body",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "url",
+            "title": "Url",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "method",
+            "title": "Http method",
+            "type": "select",
+            "required": true,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "GET",
+                    "value": "GET"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "GET"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "post_params",
+            "title": "POST params",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "headers",
+            "title": "Http headers",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "post_params_urlencoded",
+            "title": "x-www-form-urlencoded",
+            "type": "string_to_string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "basic_auth_username",
+            "title": "Basic Auth Username",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "basic_auth_password",
+            "title": "Basic Auth Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "digest_auth_username",
+            "title": "Digest Auth Username",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "digest_auth_password",
+            "title": "Digest Auth Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "ntlm_auth_username",
+            "title": "NTLM Auth Username",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "ntlm_auth_password",
+            "title": "NTLM Auth Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "ntlm_auth_domain",
+            "title": "NTLM Auth Domain",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "hide_all",
+            "title": "Hide All",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "http_proxy_address",
+            "title": "Proxy Address",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "http_proxy_login",
+            "title": "Proxy Login",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "http_proxy_password",
+            "title": "Proxy Password",
+            "type": "string",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "68474bdfefb7b1fe531774d7",
+      "title": "Extract JSON",
+      "description": "",
+      "localId": "8",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/*\nWrite any Node.js code.\nAdd any NPM packages to your code. Learn more here:\nhttps://latenode.com/help/js_code_npm_packages\nAdd custom input fields for data. Learn more here:\nhttps://latenode.com/help/js_code_params_generation\n*/\n\nexport default async function run({ execution_id, input, data, store, db }) {\n\n    function extractAndCleanJson(markdown) {\n        if (typeof markdown !== 'string') throw new Error('Input is not a string.');\n        const jsonCodeBlockRegex = /```json\\s*([\\s\\S]*?)```/i;\n        const match = markdown.match(jsonCodeBlockRegex);\n        let jsonString = match ? match[1] : markdown.trim();\n        let obj;\n        try {\n            obj = JSON.parse(jsonString);\n        } catch (e) {\n            throw new Error('Failed to parse JSON: ' + e.message);\n        }\n        \n        // Check obj is an object and not null\n        if (typeof obj !== 'object' || obj === null) {\n            return obj; // or return {} if you always want an object\n        }\n\n        // Clean up null, empty, 'N/A', 'Not provided', 'null'\n        ['first_name', 'last_name', 'preferred_agent'].forEach(field => {\n            if (\n                Object.prototype.hasOwnProperty.call(obj, field) &&\n                (obj[field] === null ||\n                    obj[field] === '' ||\n                    obj[field] === 'N/A' ||\n                    obj[field] === 'Not provided' ||\n                    obj[field] === 'null')\n            ) {\n                delete obj[field];\n            }\n        });\n        return obj;\n    }\n    \n    const jsonData = data[\"{{$11.result.choices.[0].message.content}}\"] || data[\"{{$6.result.response.candidates.[0].content.parts.[0].text}}\"];\n    const workflow = extractAndCleanJson(jsonData);\n\n    return {\n        workflow\n    }\n}",
+            "text": "/*\nWrite any Node.js code.\nAdd any NPM packages to your code. Learn more here:\nhttps://latenode.com/help/js_code_npm_packages\nAdd custom input fields for data. Learn more here:\nhttps://latenode.com/help/js_code_params_generation\n*/\n\nexport default async function run({ execution_id, input, data, store, db }) {\n\n    function extractAndCleanJson(markdown) {\n        if (typeof markdown !== 'string') throw new Error('Input is not a string.');\n        const jsonCodeBlockRegex = /```json\\s*([\\s\\S]*?)```/i;\n        const match = markdown.match(jsonCodeBlockRegex);\n        let jsonString = match ? match[1] : markdown.trim();\n        let obj;\n        try {\n            obj = JSON.parse(jsonString);\n        } catch (e) {\n            throw new Error('Failed to parse JSON: ' + e.message);\n        }\n        \n        // Check obj is an object and not null\n        if (typeof obj !== 'object' || obj === null) {\n            return obj; // or return {} if you always want an object\n        }\n\n        // Clean up null, empty, 'N/A', 'Not provided', 'null'\n        ['first_name', 'last_name', 'preferred_agent'].forEach(field => {\n            if (\n                Object.prototype.hasOwnProperty.call(obj, field) &&\n                (obj[field] === null ||\n                    obj[field] === '' ||\n                    obj[field] === 'N/A' ||\n                    obj[field] === 'Not provided' ||\n                    obj[field] === 'null')\n            ) {\n                delete obj[field];\n            }\n        });\n        return obj;\n    }\n    \n    const jsonData = data[\"{{$11.result.choices.[0].message.content}}\"] || data[\"{{$6.result.response.candidates.[0].content.parts.[0].text}}\"];\n    const workflow = extractAndCleanJson(jsonData);\n\n    return {\n        workflow\n    }\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 1356,
+        "y": 124
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "68476920007bef84592e27a9",
+      "title": "Get Voices from DB",
+      "description": "",
+      "localId": "10",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "database_id",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "text": "6d16c0c4-2139-45f6-a400-6f17e29229bb",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "collection_name",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "11labs_voices",
+            "text": "11labs_voices",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/** @CustomParams\n{\n\t\"database_id\": {\n\t\t\"type\": \"string\",\n\t\t\"title\": \"Database ID\",\n\t\t\"description\": \"The ID of the database to connect to\"\n\t},\n\t\"collection_name\": {\n\t\t\"type\": \"string\",\n\t\t\"title\": \"Collection Name\",\n\t\t\"description\": \"The name of the collection to search in\"\n\t}\n}\n*/\n\nexport default async function run({ execution_id, input, data, db, store }) {\n\tconst database_id = data.database_id;\n\tconst collection_name = data.collection_name;\n\n\tconst database = db.database(database_id);\n\tconst collection = database.collection(collection_name);\n\n\tconst limit = 100;\n\tlet offset = 0;\n\tlet allObjects = [];\n\tlet keepGoing = true;\n\n\twhile (keepGoing) {\n\t\tconst objects = await collection.findObjects(limit, offset);\n\n\t\tif (objects.length === 0) {\n\t\t\tkeepGoing = false;\n\t\t} else {\n\t\t\tallObjects = allObjects.concat(objects);\n\t\t\toffset += objects.length;\n\t\t\tif (objects.length < limit) {\n\t\t\t\tkeepGoing = false;\n\t\t\t}\n\t\t}\n\t}\n\n\tconst filteredList = allObjects.map(storageItem => {\n\t\treturn {\n\t\t\tlabels: storageItem.value.labels,\n\t\t\tname: storageItem.value.name,\n\t\t\tvoice_id: storageItem.value.voice_id,\n\t\t\tdescription: storageItem.value.description\n\t\t};\n\t});\n\n\treturn {\n\t\tstatus: 'Success',\n\t\tobjects: filteredList\n\t}\n}",
+            "text": "/** @CustomParams\n{\n\t\"database_id\": {\n\t\t\"type\": \"string\",\n\t\t\"title\": \"Database ID\",\n\t\t\"description\": \"The ID of the database to connect to\"\n\t},\n\t\"collection_name\": {\n\t\t\"type\": \"string\",\n\t\t\"title\": \"Collection Name\",\n\t\t\"description\": \"The name of the collection to search in\"\n\t}\n}\n*/\n\nexport default async function run({ execution_id, input, data, db, store }) {\n\tconst database_id = data.database_id;\n\tconst collection_name = data.collection_name;\n\n\tconst database = db.database(database_id);\n\tconst collection = database.collection(collection_name);\n\n\tconst limit = 100;\n\tlet offset = 0;\n\tlet allObjects = [];\n\tlet keepGoing = true;\n\n\twhile (keepGoing) {\n\t\tconst objects = await collection.findObjects(limit, offset);\n\n\t\tif (objects.length === 0) {\n\t\t\tkeepGoing = false;\n\t\t} else {\n\t\t\tallObjects = allObjects.concat(objects);\n\t\t\toffset += objects.length;\n\t\t\tif (objects.length < limit) {\n\t\t\t\tkeepGoing = false;\n\t\t\t}\n\t\t}\n\t}\n\n\tconst filteredList = allObjects.map(storageItem => {\n\t\treturn {\n\t\t\tlabels: storageItem.value.labels,\n\t\t\tname: storageItem.value.name,\n\t\t\tvoice_id: storageItem.value.voice_id,\n\t\t\tdescription: storageItem.value.description\n\t\t};\n\t});\n\n\treturn {\n\t\tstatus: 'Success',\n\t\tobjects: filteredList\n\t}\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 226,
+        "y": 124
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "database_id",
+            "title": "Database ID",
+            "type": "string",
+            "required": false,
+            "description": "The ID of the database to connect to",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "collection_name",
+            "title": "Collection Name",
+            "type": "string",
+            "required": false,
+            "description": "The name of the collection to search in",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "68486d20dfeb6824ca4ed09e",
+      "title": "",
+      "description": "",
+      "localId": "11",
+      "typeId": "680b9ecfffbfa146fc84decd",
+      "params": [
+        {
+          "key": "provider",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "google"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "modality",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "all modalities"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "isFree",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "model",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "google/gemini-2.5-pro-preview-05-06"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "userPrompt",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "Using the workflow below, modify the \"conversation_1749360630630\" node to include the text for the game rules and setup including win and loss criteria. Incorporate the news results listed below into this node to define the style and topic of the game. Keep all text conversational and do not include abbreviations (e.g.). Do not include text hierarchy. Do not include numbered lists. Keep node content brief and succinct (under 1000 characters). Do not include any introductory phrases. Return only the JSON object. Ensure the user is asked for their first name in the first node and set the condition nodes appropriately.\nFirst name: {{1.body.message.toolCalls.[0].function.arguments.first_name}}\n\n---WORKFLOW---\n{{$4.result}}\n\n---NEWS RESULTS---\n{{$14.news}}\n\n---GAME STYLES---\nGame Style 1: The Classic Quiz Show\nGame Style 2: The Role-Playing Simulation\nGame Style 3: The Debate Game",
+            "text": "Using the workflow below, modify the \"conversation_1749360630630\" node to include the text for the game rules and setup including win and loss criteria. Incorporate the news results listed below into this node to define the style and topic of the game. Keep all text conversational and do not include abbreviations (e.g.). Do not include text hierarchy. Do not include numbered lists. Keep node content brief and succinct (under 1000 characters). Do not include any introductory phrases. Return only the JSON object. Ensure the user is asked for their first name in the first node and set the condition nodes appropriately.\nFirst name: {{1.body.message.toolCalls.[0].function.arguments.first_name}}\n\n---WORKFLOW---\n{{$4.result}}\n\n---NEWS RESULTS---\n{{$14.news}}\n\n---GAME STYLES---\nGame Style 1: The Classic Quiz Show\nGame Style 2: The Role-Playing Simulation\nGame Style 3: The Debate Game",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "isAutoRouteSelected",
+          "type": "bool",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "models",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "fileContent",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "dialogHistoryJSON",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "[{\"role\":\"system\",\"content\":\"All nodes must be connected with an edge. Ensure each node is connected with a primary condition and a fallback \"else\" edge condition. Keep node content brief and succinct (under 1000 characters). Nodes should be separated only when expecting input from the caller. Do not include any introductory phrases. Return only the JSON object.\"}]",
+            "text": "[{\"role\":\"system\",\"content\":\"All nodes must be connected with an edge. Ensure each node is connected with a primary condition and a fallback \"else\" edge condition. Keep node content brief and succinct (under 1000 characters). Nodes should be separated only when expecting input from the caller. Do not include any introductory phrases. Return only the JSON object.\"}]",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "webSearch",
+          "type": "bool",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "webSearchContextSize",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "maxTokens",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "temperature",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "seed",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topP",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "1",
+            "text": "1",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topK",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "frequencyPenalty",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "presencePenalty",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "repetitionPenalty",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "1",
+            "text": "1",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "stop",
+          "type": "string_array",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "logitBias",
+          "type": "string_to_string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "logprobs",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topLogprobs",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "minP",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "topA",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "0",
+            "text": "0",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "responseFormatJSON",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "toolsJSON",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "reasoningEffort",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "reasoningMaxTokens",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "reasoningExclude",
+          "type": "select",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "",
+            "text": "",
+            "select": [
+              "true"
+            ],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "quick_preview_schema",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{\"response\":\"result.choices[0].message.content\"}",
+            "text": "{\"response\":\"result.choices[0].message.content\"}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 1130,
+        "y": 124
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "provider",
+            "title": "Provider",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "google",
+                    "value": "google"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": true
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "OpenAI"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "modality",
+            "title": "Input Modality",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "all modalities",
+                    "value": "ALL MODALITIES"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "all modalities"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "isFree",
+            "title": "Payment Options",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "model",
+            "title": "Model ID",
+            "type": "select",
+            "required": false,
+            "description": "When the \"Model ID\" field is filled in, the \"Auto Router\" toggle is ignored. Either the \"Model ID\" field must be filled in, or the \"Auto Router\" toggle must be enabled.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "google/gemini-2.5-pro-preview-05-06",
+                    "value": "google/gemini-2.5-pro-preview-05-06"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": true
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "openai/gpt-4.1-nano"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "userPrompt",
+            "title": "User Prompt",
+            "type": "string",
+            "required": false,
+            "description": "Your new question prompt: please note that at least one of the \"User Prompt\", \"Dialogue History\"",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "Hello! Let's talk about the following: {query}",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "isAutoRouteSelected",
+            "title": "Auto Router",
+            "type": "bool",
+            "required": false,
+            "description": "Enables automatic selection of an alternative model from the \"Models Rerouting\" list. When disabled, the routing logic is skipped.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": true,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "models",
+            "title": "Models Rerouting",
+            "type": "select",
+            "required": false,
+            "description": "If the primary model's providers are down, rate-limited, or refuse to reply due to content moderation, then the chosen models will be used",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": true,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": true
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "fileContent",
+            "title": "File Content",
+            "type": "string",
+            "required": false,
+            "description": "Enter a URL (e.g., https://example.png) or select file content from the data pop-up window (e.g., 1.body.files.[0].content)",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "dialogHistoryJSON",
+            "title": "Dialog History JSON",
+            "type": "string",
+            "required": false,
+            "description": "Valid JSON containing [the array of objects](https://openrouter.ai/docs/api-reference/chat-completion#request.body.messages), e.g. [{\"role\":\"user\",\"content\":\"Hello!\"}, {\"role\": \"assistant\", \"content\": \"Hi there! How can I help you today?\"}]  \n    role can be one of (**the roles should alternate**):  \n    system - the message author role is system;  \n    developer - an OpenAI specific role that replaces system in newer models;\n    user - the message author role is user;  \n    assistant - the message author role is assistant;  \n    tool - the message author role is tool.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "webSearch",
+            "title": "Web Search",
+            "type": "bool",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "webSearchContextSize",
+            "title": "Search Context Size",
+            "type": "select",
+            "required": false,
+            "description": "Amount of web content used to help the tool answer your question. Applies only to these [models](https://openrouter.ai/models?fmt=cards&supported_parameters=web_search_options).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "maxTokens",
+            "title": "Max Tokens",
+            "type": "string",
+            "required": false,
+            "description": "An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and reasoning tokens.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "temperature",
+            "title": "Temperature",
+            "type": "string",
+            "required": false,
+            "description": "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or \"Top P\" but not both. [Read more](https://openrouter.ai/docs/api-reference/parameters#temperature).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "seed",
+            "title": "Seed",
+            "type": "string",
+            "required": false,
+            "description": "Repeated requests with the same seed and parameters return the same result. Determinism is not guaranteed for some models. [Read more](https://openrouter.ai/docs/api-reference/parameters#seed).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topP",
+            "title": "Top P",
+            "type": "string",
+            "required": false,
+            "description": "Number between 0 and 1. An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with \"Top P\" probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or \"Temperature\" but not both. [Read mode](https://openrouter.ai/docs/api-reference/parameters#top-p).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "1",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topK",
+            "title": "Top K",
+            "type": "string",
+            "required": false,
+            "description": "Limits the model’s choice of tokens at each step, making it choose from a smaller set. [Read more](https://openrouter.ai/docs/api-reference/parameters#top-k).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "frequencyPenalty",
+            "title": "Frequency Penalty",
+            "type": "string",
+            "required": false,
+            "description": "Number between -2.0 and 2.0. Controlling the repetition of tokens based on how often they appear in the input. [Read more](https://openrouter.ai/docs/api-reference/parameters#frequency-penalty).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "presencePenalty",
+            "title": "Presence Penalty",
+            "type": "string",
+            "required": false,
+            "description": "Number between -2.0 and 2.0. Repeats specific tokens already used in the input. [Read more](https://openrouter.ai/docs/api-reference/parameters#presence-penalty).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "repetitionPenalty",
+            "title": "Repetition Penalty",
+            "type": "string",
+            "required": false,
+            "description": "Number between 0.0 and 2.0. Reduces the likelihood of the model repeating words or phrases. A higher value makes the output more varied by discouraging repetition. [Read more](https://openrouter.ai/docs/api-reference/parameters#repetition-penalty).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "1",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "stop",
+            "title": "Stop Sequences",
+            "type": "string_array",
+            "required": false,
+            "description": "Stop generation immediately if the model encounter any token specified in the stop array",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "logitBias",
+            "title": "Logit Bias",
+            "type": "string_to_string",
+            "required": false,
+            "description": "Adjusts the likelihood of specific tokens being selected by modifying their logits. Values range from -100 to 100. [Read more](https://openrouter.ai/docs/api-reference/parameters#logit-bias). For example: In the 'Key' field, enter \"-80\", in the 'Value' field, enter \"10\".",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "logprobs",
+            "title": "Logprobs",
+            "type": "select",
+            "required": false,
+            "description": "Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topLogprobs",
+            "title": "Top Logprobs",
+            "type": "string",
+            "required": false,
+            "description": "Number of most likely tokens to return at each token position, each with an associated log probability",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "minP",
+            "title": "Min P",
+            "type": "string",
+            "required": false,
+            "description": "Minimum probability for a token to be considered, relative to the probability of the most likely token. [Read more](https://openrouter.ai/docs/api-reference/parameters#min-p).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "topA",
+            "title": "Top A",
+            "type": "string",
+            "required": false,
+            "description": "Consider only the top tokens with \"sufficiently high\" probabilities based on the probability of the most likely token. [Read more](https://openrouter.ai/docs/api-reference/parameters#top-a).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "0",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "responseFormatJSON",
+            "title": "Response Format JSON",
+            "type": "string",
+            "required": false,
+            "description": "For example: { \"type\": \"json_schema\", \"json_schema\": { \"name\": \"weather\", \"strict\": true, \"schema\": { \"type\": \"object\", \"properties\": { \"location\": { \"type\": \"string\", \"description\": \"City or location name\" }, \"temperature\": { \"type\": \"number\", \"description\": \"Temperature in Celsius\" }, \"conditions\": { \"type\": \"string\", \"description\": \"Weather conditions description\" } }, \"required\": [\"location\", \"temperature\", \"conditions\"], \"additionalProperties\": false } } }  \n    [Read more](https://openrouter.ai/docs/features/structured-outputs).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "toolsJSON",
+            "title": "Tools JSON",
+            "type": "string",
+            "required": false,
+            "description": "For example: [{\"type\":\"function\",\"function\":{\"name\":\"search_gutenberg_books\",\"description\":\"Search for books in the Project Gutenberg library based on specified search terms\",\"parameters\":{\"type\":\"object\",\"properties\":{\"search_terms\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"List of search terms to find books in the Gutenberg library (e.g. ['dickens', 'great'] to search for books by Dickens with 'great' in the title)\"}},\"required\":[\"search_terms\"]}}}]  \n    [Read more](https://openrouter.ai/docs/features/tool-calling).",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "reasoningEffort",
+            "title": "Reasoning Effort",
+            "type": "select",
+            "required": false,
+            "description": "OpenAI-style reasoning effort setting",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "reasoningMaxTokens",
+            "title": "Reasoning Max Tokens",
+            "type": "string",
+            "required": false,
+            "description": "Non-OpenAI-style reasoning effort setting. Cannot be used simultaneously with effort.",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "reasoningExclude",
+            "title": "Reasoning Exclude",
+            "type": "select",
+            "required": false,
+            "description": "Whether to exclude reasoning from the response",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": {
+                "options": [
+                  {
+                    "key": "true",
+                    "value": "TRUE"
+                  }
+                ],
+                "multiple": false,
+                "fetchOn": [],
+                "withLabel": false,
+                "type": "",
+                "pagination": {
+                  "page": 0,
+                  "context": "",
+                  "supported": false
+                },
+                "query": {
+                  "value": "",
+                  "supported": false
+                }
+              },
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [
+                "false"
+              ],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": {
+          "environment": "",
+          "isPd": true,
+          "isJsn": true,
+          "pdAvailableGetLastRecords": false
+        },
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "68490b102484d2f6070590b9",
+      "title": "Error",
+      "description": "",
+      "localId": "12",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/*\nWrite any Node.js code.\nAdd any NPM packages to your code. Learn more here:\nhttps://latenode.com/help/js_code_npm_packages\nAdd custom input fields for data. Learn more here:\nhttps://latenode.com/help/js_code_params_generation\n*/\n\nexport default async function run({execution_id, input, data, store, db}) {\n\tthrow new Error(\"Call status error\");\n\treturn {\n\n\t}\n}",
+            "text": "/*\nWrite any Node.js code.\nAdd any NPM packages to your code. Learn more here:\nhttps://latenode.com/help/js_code_npm_packages\nAdd custom input fields for data. Learn more here:\nhttps://latenode.com/help/js_code_params_generation\n*/\n\nexport default async function run({execution_id, input, data, store, db}) {\n\tthrow new Error(\"Call status error\");\n\treturn {\n\n\t}\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 1808,
+        "y": 62
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "68490b6cff42242cad740eb2",
+      "title": "Error",
+      "description": "",
+      "localId": "13",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/*\nWrite any Node.js code.\nAdd any NPM packages to your code. Learn more here:\nhttps://latenode.com/help/js_code_npm_packages\nAdd custom input fields for data. Learn more here:\nhttps://latenode.com/help/js_code_params_generation\n*/\n\nexport default async function run({execution_id, input, data, store, db}) {\n\tthrow new Error(\"Intentional error thrown by NodeJS node.\");\n\treturn {\n\n\t}\n}",
+            "text": "/*\nWrite any Node.js code.\nAdd any NPM packages to your code. Learn more here:\nhttps://latenode.com/help/js_code_npm_packages\nAdd custom input fields for data. Learn more here:\nhttps://latenode.com/help/js_code_params_generation\n*/\n\nexport default async function run({execution_id, input, data, store, db}) {\n\tthrow new Error(\"Intentional error thrown by NodeJS node.\");\n\treturn {\n\n\t}\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 1582,
+        "y": 186
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    },
+    {
+      "id": "6849829e3bfaab8ce5507b91",
+      "title": "Map News Results",
+      "description": "",
+      "localId": "14",
+      "typeId": "62cc22317ae28c026d256930",
+      "params": [
+        {
+          "key": "news_results_path",
+          "type": "string",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "{{$7.body.results}}",
+            "text": "{{$7.body.results}}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        },
+        {
+          "key": "code",
+          "type": "text",
+          "value": {
+            "stringToString": [],
+            "int": "0",
+            "string": "/** @CustomParams\n{\n  \"news_results_path\": {\n    \"type\": \"string\",\n    \"title\": \"News Results Data Path\",\n    \"description\": \"Data path to the news results array, e.g. {{$7.body.results}}\"\n  }\n}\n*/\n\nexport default async function run({ execution_id, input, data }) {\n  const newsResults = JSON.parse(data.news_results_path);\n  // If the data is a string, try to parse as JSON \n  if (typeof newsResults === \"string\") {\n    try {\n      newsResults = JSON.parse(data.news_results_path);\n    } catch(e) {\n      return { error: \"Failed to parse news results JSON\", details: e.message };\n    }\n  }\n\n  // If not an array, return an error \n  if (!Array.isArray(newsResults)) {\n    return { error: \"News results is not an array\", received: newsResults };\n  }\n\n  // Extract properties from each news item \n  const extracted = newsResults.map(item => ({\n    age: item.age,\n    description: item.description,\n    title: item.title,\n    extra_snippets: item.extra_snippets\n  }));\n\n  return { news: extracted };\n}",
+            "text": "/** @CustomParams\n{\n  \"news_results_path\": {\n    \"type\": \"string\",\n    \"title\": \"News Results Data Path\",\n    \"description\": \"Data path to the news results array, e.g. {{$7.body.results}}\"\n  }\n}\n*/\n\nexport default async function run({ execution_id, input, data }) {\n  const newsResults = JSON.parse(data.news_results_path);\n  // If the data is a string, try to parse as JSON \n  if (typeof newsResults === \"string\") {\n    try {\n      newsResults = JSON.parse(data.news_results_path);\n    } catch(e) {\n      return { error: \"Failed to parse news results JSON\", details: e.message };\n    }\n  }\n\n  // If not an array, return an error \n  if (!Array.isArray(newsResults)) {\n    return { error: \"News results is not an array\", received: newsResults };\n  }\n\n  // Extract properties from each news item \n  const extracted = newsResults.map(item => ({\n    age: item.age,\n    description: item.description,\n    title: item.title,\n    extra_snippets: item.extra_snippets\n  }));\n\n  return { news: extracted };\n}",
+            "select": [],
+            "constructorParams": [],
+            "custom": "",
+            "stringArray": [],
+            "bool": false,
+            "multiselect": [],
+            "connection": "",
+            "stringToAny": []
+          }
+        }
+      ],
+      "coords": {
+        "x": 904,
+        "y": 124
+      },
+      "calculatedNodeType": {
+        "id": "",
+        "name": "",
+        "alias": "",
+        "description": "",
+        "descriptionAttention": "",
+        "params": [
+          {
+            "key": "news_results_path",
+            "title": "News Results Data Path",
+            "type": "string",
+            "required": false,
+            "description": "Data path to the news results array, e.g. {{$7.body.results}}",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "code",
+            "title": "",
+            "type": "text",
+            "required": false,
+            "description": "",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": {
+                "lang": "",
+                "prefix": "",
+                "suffix": "",
+                "fetchOn": []
+              },
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          },
+          {
+            "key": "quick_preview_schema",
+            "title": "Quick Preview Schema",
+            "type": "string",
+            "required": false,
+            "description": "This field lets you format response data for easy reading. Define key-path pairs in JSON, where the key is the header and the value is the data path.\nExample: `{ \"Name\": \"result.user.name\", \"Email\": \"result.contact.email\" }`",
+            "options": {
+              "string": null,
+              "int": null,
+              "text": null,
+              "stringToString": null,
+              "select": null,
+              "stringArray": null,
+              "bool": null,
+              "connection": null,
+              "stringToAny": null
+            },
+            "default": {
+              "stringToString": [],
+              "int": "0",
+              "string": "",
+              "text": "",
+              "select": [],
+              "constructorParams": [],
+              "custom": "",
+              "stringArray": [],
+              "bool": false,
+              "multiselect": [],
+              "connection": "",
+              "stringToAny": []
+            },
+            "optional": false
+          }
+        ],
+        "systemInfo": null,
+        "icon": null,
+        "purposes": [],
+        "isPublic": false,
+        "billing": null
+      }
+    }
+  ],
+  "gateways": [
+    {
+      "nodeId": "6846d90d007bef84592e1ed3",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "6846d90d007bef84592e1ed4",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        },
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "68476920007bef84592e27a9",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "6846e448efb7b1fe53176cbb",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "68474aa7efb7b1fe531774ae",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "68474bdfefb7b1fe531774d7",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": "{{not(empty(8.workflow))}}"
+            }
+          },
+          "label": "not empty workflow",
+          "nodeId": "6846e6a3007bef84592e1fa4",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        },
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "error",
+          "nodeId": "68490b6cff42242cad740eb2",
+          "localNodeId": "",
+          "isFallback": true,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "68476920007bef84592e27a9",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "6846e448efb7b1fe53176cbb",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "68474aa7efb7b1fe531774ae",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "6849829e3bfaab8ce5507b91",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "68486d20dfeb6824ca4ed09e",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "68474bdfefb7b1fe531774d7",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "6846e6a3007bef84592e1fa4",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": "{{5.status != 201}}"
+            }
+          },
+          "label": "error",
+          "nodeId": "68490b102484d2f6070590b9",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    },
+    {
+      "nodeId": "6849829e3bfaab8ce5507b91",
+      "localNodeId": "",
+      "routes": [
+        {
+          "condition": {
+            "type": "",
+            "expression": {
+              "value": ""
+            }
+          },
+          "label": "",
+          "nodeId": "68486d20dfeb6824ca4ed09e",
+          "localNodeId": "",
+          "isFallback": false,
+          "purpose": "input"
+        }
+      ],
+      "name": "",
+      "purpose": "output"
+    }
+  ],
+  "version": "73",
+  "tags": [],
+  "release": true,
+  "latestLocalNodeId": "14",
+  "environments": [
+    {
+      "id": "6846d8d3cd09a51e3217b110",
+      "alias": "prod",
+      "name": "Prod",
+      "actualVersion": "73",
+      "isActive": true
+    },
+    {
+      "id": "6846d8d3cd09a51e3217b111",
+      "alias": "dev",
+      "name": "Dev",
+      "actualVersion": "73",
+      "isActive": true
+    }
+  ],
+  "nodulInfo": {
+    "isNodul": false,
+    "isPublic": false,
+    "isCodul": false
+  },
+  "readOnly": false,
+  "executionBucket": "execution_bucket_default",
+  "isUsersPublic": false
+}
